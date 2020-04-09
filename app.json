@@ -1,0 +1,12 @@
+{
+  "pages": ["pages/index/index", "pages/logs/logs"],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f6c700",
+    "navigationBarTitleText": "WeChat1",
+    "navigationBarTextStyle": "black"
+  },
+
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,163 @@
+/**index.wxss**/
+@import './iconfont.wxss';
+page {
+  height: 100%;
+  background: #fcf8fd;
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.header {
+  height: 180rpx;
+  background: #f6c700;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  padding-top: 100rpx;
+  box-sizing: border-box;
+}
+.h-container {
+  width: 100%;
+  height: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  display: flex;
+  padding-left: 30rpx;
+}
+.h-input {
+  background: #ffffff;
+  border-radius: 40rpx;
+  flex-grow: 0;
+  height: 100%;
+  margin-left: 30rpx;
+  position: relative;
+  box-sizing: border-box;
+  padding: 10rpx 0;
+  padding-left: 60rpx;
+  color: #aaa;
+}
+.h-input .search-icon {
+  position: absolute;
+  height: 46rpx;
+  left: 10rpx;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.content-area {
+  flex: 1;
+  width: 100%;
+  padding-top: 180rpx;
+  position: relative;
+}
+.near-group > .title {
+  padding-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+.area-bg {
+  width: 100%;
+  height: 200rpx;
+  background-image: linear-gradient(#f6c800, #ffffff);
+}
+.content {
+  margin: 0rpx 20rpx;
+  margin-top: -180rpx;
+  box-sizing: border-box;
+  background: linear-gradient(#ffffff, #fef8fd);
+  border-radius: 20rpx;
+  z-index: 10;
+}
+.new-icon-circle {
+  margin-bottom: 0.14rem;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 30rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 180rpx;
+  color: #fff;
+  background: #fd9d21;
+}
+.iconfont {
+  font-family: 'iconfont' !important;
+  font-size: 30px;
+  font-weight: bolder;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Artboard {
+  font-size: 80rpx;
+}
+.icon-weibiaoti1:before {
+  content: '\e61e';
+}
+.icon-xiuxianyule {
+  font-size: 80rpx;
+}
+.icon-waimai {
+  font-size: 80rpx;
+}
+.bg-icons {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(50rpx, auto));
+  grid-column-gap: 40rpx;
+  padding: 0 20rpx;
+  padding-top: 40rpx;
+  font-size: 20rpx;
+}
+.icons-box {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  text-align: center;
+  color: #aaa;
+}
+.icons-box:nth-child(n + 6) {
+  margin-top: 20rpx;
+}
+.icons-box:nth-child(n + 6) .iconfont {
+  height: 40px;
+}
+.swiper {
+  margin-top: 40rpx;
+}
+swiper {
+  height: 180rpx;
+}
+.swiper-item {
+  text-align: center;
+}
+.swiper-item image {
+  width: 100%;
+  height: 180rpx;
+}
+.near-group-container {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-column-gap: 10rpx;
+}
+.near-group {
+  padding: 0 20rpx;
+  margin-top: 20px;
+  background: #fff;
+}
+
+.group-item {
+  padding-top: 10rpx;
+}
+
+.group-card {
+  padding-bottom: 20rpx;
+}
+.group-card image {
+  width: 350rpx;
+  height: 220rpx;
+}
+.group-item {
+  display: grid;
+  grid-template-columns: 50rpx auto 50rpx;
+  font-size: 20rpx;
+}

@@ -1,0 +1,52 @@
+<!-- index.wxml -->
+<view class="container">
+  <view class="header">
+    <view class="h-container" hover-class="none" hover-stop-propagation="false">
+      <view class="location" hover-class="none" hover-stop-propagation="false">深圳</view>
+      <input type="text" class="h-input">
+        <icon type="search" size="23" class="search-icon" />
+      </input>
+    </view>
+  </view>
+  <view class="content-area">
+    <view class="area-bg" hover-class="none" hover-stop-propagation="false"></view>
+    <view class="content" hover-class="none" hover-stop-propagation="false">
+      <view class="bg-icons">
+        <block wx:for="{{items}}">
+          <view class="icons-box" hover-class="none" hover-stop-propagation="false">
+            <span class="{{item.icon}}" hover-class="none" hover-stop-propagation="false" style="{{item.style}}"></span>
+            <span class="{{index<=4?'title-span':''}}">{{item.title}}</span>
+          </view>
+        </block>
+      </view>
+      <view class="page-section page-section-spacing swiper">
+        <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+          <block wx:for="{{imgs}}" wx:key="*this">
+            <swiper-item>
+              <view class="swiper-item {{index}}">
+                <image class="" src="{{item.src}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+              </view>
+            </swiper-item>
+          </block>
+        </swiper>
+      </view>
+    </view>
+    <view class="near-group" hover-class="none" hover-stop-propagation="false">
+      <view class="title">附近拼团</view>
+      <view class="near-group-container" hover-class="none" hover-stop-propagation="false">
+        <block wx:for="{{nearGroup}}" wx:key="{{index}}*">
+          <view class="group-card" hover-class="none" hover-stop-propagation="false">
+            <image class="" src="{{item.img}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+            <block wx:if="{{item.isLike}}">
+              <view class="group-item" hover-class="none" hover-stop-propagation="false">
+                <i class="iconfont icon-xinaixin" style="color:#f4343f;font-size:14px"></i>
+                <view class="card-title">{{item.title}}</view>
+                <i class="iconfont icon-xinaixin" style="color:#f4343f;font-size:14px"></i>
+              </view>
+            </block>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>
