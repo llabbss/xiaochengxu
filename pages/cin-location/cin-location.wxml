@@ -1,0 +1,26 @@
+<!-- pages/cin-location/cin-location.wxml -->
+<view class="cin-loc" hover-class="none" hover-stop-propagation="false">
+    <view class="l-header" hover-class="none" hover-stop-propagation="false">
+        <view class="icon" hover-class="none" hover-stop-propagation="false">
+            <i class="iconfont icon-arrow-left-copy-copy icon" bind:tap="linkBack"></i>
+        </view>
+        <view class="" hover-class="none" hover-stop-propagation="false">影院</view>
+    </view>
+    <view class="location" hover-class="none" hover-stop-propagation="false">
+        <view class="cine-info" hover-class="none" hover-stop-propagation="false">
+            <view class="cine-name" hover-class="none" hover-stop-propagation="false">
+                英皇电影城（东海缤纷店）
+            </view>
+            <view class="cine-add" hover-class="none" hover-stop-propagation="false">
+                福田东海缤纷天地商城B1层
+            </view>
+        </view>
+        <view class="map" hover-class="none" hover-stop-propagation="false">
+            <view class="line" hover-class="none" hover-stop-propagation="false">|</view>
+            <view class="map-cont" hover-class="none" hover-stop-propagation="false">
+                <i class="iconfont icon-location i-map"></i>
+                <text class="text" selectable="false" space="false" decode="false">地图</text>
+            </view>
+        </view>
+    </view>
+</view>

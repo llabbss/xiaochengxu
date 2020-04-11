@@ -1,0 +1,45 @@
+<!-- pages/film-list/films.wxml -->
+<view class="films" hover-class="none" hover-stop-propagation="false">
+    <view class="l-header" hover-class="none" hover-stop-propagation="false">
+        <view class="icon" hover-class="none" hover-stop-propagation="false">
+            <i class="iconfont icon-arrow-left-copy-copy icon" bind:tap="linkBack"></i>
+        </view>
+        <view class="" hover-class="none" hover-stop-propagation="false">电影</view>
+    </view>
+    <scroll-view class="cinema-list" scroll-x="false" scroll-y="false" upper-threshold="50" lower-threshold="50" scroll-top="0" scroll-left="0" scroll-into-view="" scroll-with-animation="false" enable-back-to-top="false" bindscrolltoupper="" bindscrolltolower="" bindscroll="">
+        <view class="cinema" hover-class="none" hover-stop-propagation="false">
+            <view class="cinema-item">
+                <view class="name" hover-class="none" hover-stop-propagation="false">
+                    英皇电影城（东海缤纷店）
+                </view>
+                <view class="cinema-distance" hover-class="none" hover-stop-propagation="false">
+                    500m
+                </view>
+            </view>
+            <view class="price" hover-class="none" hover-stop-propagation="false">
+                <text class="text" selectable="false" space="false" decode="false">参考价格：暂无</text>
+                <text class="tag" selectable="false" space="false" decode="false">座</text>
+                <text class="tag" selectable="false" space="false" decode="false">IMAX厅</text>
+                <text class="tag tag-red" selectable="false" space="false" decode="false">退</text>
+                <text class="tag" selectable="false" space="false" decode="false">改签</text>
+            </view>
+        </view>
+        <view class="cinema" hover-class="none" hover-stop-propagation="false" wx:for="{{locFilmsList}}" wx:for-index="idx" wx:for-item="cinema">
+            <view class="cinema-item">
+                <view class="name" hover-class="none" hover-stop-propagation="false">
+                    {{cinema.cinemaName}}
+                </view>
+                <view class="cinema-distance" hover-class="none" hover-stop-propagation="false" wx:if="{{cinema.distance>0}}">
+                    {{cinema.distance<1000?cinema.distance:cinema.distance/100+'k'}}m
+                </view>
+            </view>
+            <view class="price" hover-class="none" hover-stop-propagation="false">
+                <text class="text" selectable="false" space="false" decode="false">参考价格：暂无</text>
+                <text class="tag" selectable="false" space="false" decode="false">座</text>
+                <text class="tag" selectable="false" space="false" decode="false">IMAX厅</text>
+                <text class="tag" selectable="false" space="false" decode="false">退</text>
+                <text class="tag tag-red" selectable="false" space="false" decode="false">改签</text>
+            </view>
+        </view>
+    </scroll-view>
+</view>

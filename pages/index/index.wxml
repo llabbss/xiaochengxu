@@ -2,7 +2,10 @@
 <view class="container">
   <view class="header">
     <view class="h-container" hover-class="none" hover-stop-propagation="false">
-      <view class="location" hover-class="none" hover-stop-propagation="false">深圳</view>
+      <view class="location" hover-class="none" hover-stop-propagation="false" bind:tap="locationPage">
+        {{curCity}}
+        <i class="iconfont icon-xiajiantou" style="font-size:14px"></i>
+      </view>
       <input type="text" class="h-input">
         <icon type="search" size="23" class="search-icon" />
       </input>
@@ -13,7 +16,7 @@
     <view class="content" hover-class="none" hover-stop-propagation="false">
       <view class="bg-icons">
         <block wx:for="{{items}}">
-          <view class="icons-box" hover-class="none" hover-stop-propagation="false">
+          <view class="icons-box" hover-stop-propagation="false" data-loc="{{curLatLng.lat}},{{curLatLng.lng}}" data-path="{{item.path}}" bind:tap="navigateToPage">
             <span class="{{item.icon}}" hover-class="none" hover-stop-propagation="false" style="{{item.style}}"></span>
             <span class="{{index<=4?'title-span':''}}">{{item.title}}</span>
           </view>

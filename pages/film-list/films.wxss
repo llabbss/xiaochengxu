@@ -1,0 +1,63 @@
+/* pages/film-list/films.wxss */
+@import '/assets/iconfont.wxss';
+.films {
+  overflow: auto;
+  position: relative;
+  height: 100%;
+}
+.films .l-header {
+  padding: 0 20rpx;
+  padding-top: 120rpx;
+  display: grid;
+  grid-template-columns: repeat(3, 33.3%);
+  justify-content: center;
+  align-items: center;
+  line-height: 16px;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  padding-bottom: 20rpx;
+  top: 0;
+  background: #ffffff;
+}
+.cinema-list {
+  margin-top: 87px;
+}
+.films .cinema {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: 100%;
+  justify-content: space-between;
+  padding: 20rpx 20rpx;
+  border: 1px solid #e3dfe3;
+  border-bottom: 0;
+}
+.cinema-item {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: space-between;
+}
+.cinema-distance,
+.cinema .price {
+  font-size: 12px;
+  color: #a39fa3;
+}
+.cinema .price {
+  margin-top: 10rpx;
+}
+.cinema .price .text {
+  margin-right: 10rpx;
+}
+.cinema .price .tag {
+  line-height: 15px;
+  color: #8ac345;
+  padding: 1rpx 4rpx;
+  margin-right: 10rpx;
+  border-radius: 4rpx;
+  box-shadow: 1px 1px 1px #999999;
+  border: 1px solid #8ac345;
+}
+.cinema .price .tag-red {
+  border: 1px solid #f8db6d;
+  color: #f8db6d;
+}

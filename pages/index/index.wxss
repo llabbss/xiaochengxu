@@ -1,5 +1,5 @@
 /**index.wxss**/
-@import './iconfont.wxss';
+@import '/assets/iconfont.wxss';
 page {
   height: 100%;
   background: #fcf8fd;
@@ -16,6 +16,7 @@ page {
   width: 100%;
   position: fixed;
   top: 0;
+  z-index: 1000;
   padding-top: 100rpx;
   box-sizing: border-box;
 }
@@ -29,6 +30,7 @@ page {
 }
 .h-input {
   background: #ffffff;
+  width: 280rpx;
   border-radius: 40rpx;
   flex-grow: 0;
   height: 100%;

@@ -1,0 +1,64 @@
+<!-- pages/location/location.wxml -->
+<view class="location" scroll-x="false" scroll-y="true" upper-threshold="50" lower-threshold="50" scroll-top="0" scroll-left="0" scroll-into-view="" scroll-with-animation="false" enable-back-to-top="false" bindscrolltoupper="" bindscrolltolower="" bindscroll="">
+    <view class="l-header" hover-class="none" hover-stop-propagation="false">
+        <view class="icon" hover-class="none" hover-stop-propagation="false">
+            <i class="iconfont icon-arrow-left-copy-copy icon" bind:tap="linkBack"></i>
+        </view>
+        <view class="" hover-class="none" hover-stop-propagation="false">选择城市</view>
+    </view>
+    <view class="scrollContain" hover-class="none" hover-stop-propagation="false">
+        <view class="search-pannel" hover-class="none" hover-stop-propagation="false">
+            <view class="search-container" hover-class="none" hover-stop-propagation="false">
+                <icon type="search" size="23" class="search-icon" size="18" />
+                <input type="text" placeholder="城市/拼音" name="" id="" class="search-input"></input>
+                <icon class="clear" type="clear" size="18" color="#cdc8cd"></icon>
+            </view>
+            <view class="text" hover-class="none" hover-stop-propagation="false">取消</view>
+        </view>
+        <view class="cur-pos" hover-class="none" hover-stop-propagation="false">
+            当前：{{curCity}}
+        </view>
+        <view class="nearlyLoc" hover-class="none" hover-stop-propagation="false">
+            <view class="text" hover-class="none" hover-stop-propagation="false">定位/最近访问</view>
+            <view class="nearly-container" hover-class="none" hover-stop-propagation="false">
+                <view class="local-item" hover-class="none" hover-stop-propagation="false">
+                    <i class="iconfont icon-shuc-location loc-item"></i>
+                    深圳
+                </view>
+            </view>
+        </view>
+        <view class="hot-cities" hover-class="none" hover-stop-propagation="false">
+            <view class="text" hover-class="none" hover-stop-propagation="false">热门城市</view>
+            <view class="hot-city-list" hover-class="none" hover-stop-propagation="false">
+                <view class="local-item" hover-class="none" hover-stop-propagation="false" wx:for="{{hotCities}}">
+                    {{item.name}}
+                </view>
+            </view>
+        </view>
+        <view class="allCities" hover-class="none" hover-stop-propagation="false">
+            <view class="text">所有城市</view>
+            <scroll-view class="city" hover-class="none" hover-stop-propagation="false" scroll-y="{{true}}" scroll-top="{{scrollTop}}" scroll-into-view="#pannel" enable-flex="{{true}}">
+                <view id="pannel" hover-class="none" hover-stop-propagation="false" wx:for="{{cityList}}" wx:for-index="index" wx:for-item="cityObj">
+                    <view class="chart" hover-class="none" hover-stop-propagation="false">
+                        <view id="{{cityObj.name}}" hover-class="none" hover-stop-propagation="false">
+                            {{cityObj.name}}
+                        </view>
+                    </view>
+                    <view class="cities-item" hover-class="none" hover-stop-propagation="false">
+                        <view class="local-item" data-loc="{{item.name}}" data-id="{{item.id}}" data-position="{{item.location.lat}},{{item.location.lng}}" hover-stop-propagation="false" wx:for="{{cityObj.cities}}" bind:tap="locationTo">
+                            {{item.name}}
+                        </view>
+                    </view>
+                </view>
+            </scroll-view>
+            <view class="charts" hover-class="none" hover-stop-propagation="false">
+                <span>
+                    <a href="#">最近热门</a>
+                </span>
+                <span wx:for="{{charts}}" wx:for-item="chart" wx:for-index="idx">
+                    <a href="#{{chart}}" id="{{idx}}-{{chart}}" bind:tap="scrollTo">{{chart}}</a>
+                </span>
+            </view>
+        </view>
+    </view>
+</view>
